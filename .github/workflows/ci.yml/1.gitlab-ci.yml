@@ -1,0 +1,28 @@
+name: Базовый пайплайн
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Проверка кода
+        uses: actions/checkout@v2
+      - name: Сборка проекта
+        run: echo "Сборка проекта..."
+
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Проверка кода
+        uses: actions/checkout@v2
+      - name: Запуск тестов
+        run: echo "Запуск тестов..."
+
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Проверка кода
+        uses: actions/checkout@v2
+      - name: Развертывание приложения
+        run: echo "Развертывание приложения..."
