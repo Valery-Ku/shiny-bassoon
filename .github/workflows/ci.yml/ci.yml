@@ -1,1 +1,12 @@
-runs-on: self-hosted
+name: Пример рабочего процесса
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Проверка кода
+        uses: actions/checkout@v2
+      - name: Запуск скрипта
+        run: echo "ccc"
